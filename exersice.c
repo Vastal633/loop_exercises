@@ -82,3 +82,50 @@ int main(){
 	printf("\nthe sum of odd digits is: %d",sum);
 	return 0;
 }
+
+//....................................................................Q5 reverse the numbers...............................................................................................
+
+#include<stdio.h>
+
+int main(){
+	int n,digit,reverse_num=0;
+	printf("enter any numbers: ");
+	scanf("%d",&n);
+	
+	while(n!=0){
+		digit = n%10;//give last digit
+		reverse_num = reverse_num * 10 + digit;
+		n = n /10;
+	}
+	
+	printf("reversed numbers are: %d",reverse_num);
+	return 0;
+}
+
+
+//..........................................................find sum of first and last digit and print it................................................................................
+
+#include<stdio.h>
+
+int main(){
+ int n=1,first_digit,last_digit,sum;
+ printf("enter the value of n: ");
+ scanf("%d",&n);
+	
+	last_digit = n%10;
+	printf("%d\n",last_digit);
+	
+	
+	while(n>=10){
+		n = n /10;
+		printf("noe the value of n is: %d\n",n);
+	}
+	
+	first_digit = n;
+	printf("%d\n",first_digit);
+	sum = first_digit + last_digit;
+	
+	printf("%d\n",sum);
+	return 0;
+}
+
